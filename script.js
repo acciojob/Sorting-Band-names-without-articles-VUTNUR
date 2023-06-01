@@ -1,5 +1,4 @@
-//your code here
-
+//your code here 
 function removeArticle(bandName) {
   // List of articles to remove
   let articles = ["a", "an", "the"];
@@ -28,3 +27,4 @@ for (let i = 0; i < bandNames.length; i++) {
   liElement.textContent = bandNames[i];
   ulElement.appendChild(liElement);
 }
+[1:52 pm, 01/06/2023] Nethaji Goud: Chatgpt da idi
