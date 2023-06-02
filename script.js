@@ -1,30 +1,22 @@
-//your code here 
-function removeArticle(bandName) {
-  // List of articles to remove
-  let articles = ["a", "an", "the"];
-  // Split band name into words
-  let words = bandName.split(" ");
-  // Check if first word is an article
+//your code herelet bandNames = ['The Rolling Stones', 'Led Zeppelin', 'The Beatles', 'Pink Floyd', 'Aerosmith'];
+
+// Remove articles from band names
+function removeArticles(name) {
+  const articles = ['a', 'an', 'the'];
+  const words = name.split(' ');
   if (articles.includes(words[0].toLowerCase())) {
-    // Remove the article
     words.shift();
   }
-  // Join the remaining words and return the modified band name
-  return words.join(" ");
+  return words.join(' ');
 }
 
-// Sort the band names in lexicographic order excluding articles
-bandNames.sort(function(a, b) {
-  return removeArticle(a).localeCompare(removeArticle(b));
+// Sort band names without articles
+bandNames.sort((a, b) => removeArticles(a).localeCompare(removeArticles(b)));
+
+// Display band names in HTML
+const bandList = document.getElementById('band');
+bandNames.forEach(name => {
+  const listItem = document.createElement('li');
+  listItem.textContent = name;
+  bandList.appendChild(listItem);
 });
-
-// Get the ul element with id 'band'
-let ulElement = document.getElementById("band");
-
-// Loop through the sorted band names and add them as li elements to the ul element
-for (let i = 0; i < bandNames.length; i++) {
-  let liElement = document.createElement("li");
-  liElement.textContent = bandNames[i];
-  ulElement.appendChild(liElement);
-}
-[1:52 pm, 01/06/2023] Nethaji Goud: Chatgpt da idi
