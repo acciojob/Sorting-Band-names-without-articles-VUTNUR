@@ -1,4 +1,5 @@
-//your code herelet bandNames = ['The Rolling Stones', 'Led Zeppelin', 'The Beatles', 'Pink Floyd', 'Aerosmith'];
+//your code here
+let bandNames = ['The Rolling Stones', 'Led Zeppelin', 'The Beatles', 'Pink Floyd', 'Aerosmith'];
 
 // Remove articles from band names
 function removeArticles(name) {
